@@ -1,0 +1,44 @@
+    <div class="container"> 
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a style="background-color: #6d7375; color: #fff" class="navbar-brand">Boom Technology</a>
+          </div>
+
+
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/jobboard">Job Board</a></li>
+              <li><a href="/about">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-header">Applications</li>
+                  <li><a href="/jobboard">The Job Board</a></li>
+                  <li><a href="/agent">AgentFree</a></li>
+                  <li><a href="split">Split Fee</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/adminboard">Admin</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+              <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+
+
+
+
+          
+        </div><!--/.container-fluid -->
+      </nav>

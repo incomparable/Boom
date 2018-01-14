@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block body %}
+
+
+	<h2>Admin Dashboard</h2>
+	<small>Welcome <bold>{{ name }}</bold></small>
+	<p><a class="btn btn-success" href="/add_job"> Add Job </a></p>
+	<!--<hr>
+	<table class="table table-strpied">
+		<tr>
+			<th>Job ID</th>
+			<th>Title</th>
+			<th>Salary</th>
+			<th>Location</th>
+			<th>Date</th>
+			<th>Contact</th>
+			<th></th>
+			<th></th>
+		</tr>
+		{% for job in jobs %}
+		<tr>
+			<td>{{job.id}}</td>
+			<td>{{job.title}}</td>
+			<td>{{job.salary}}</td>
+			<td>{{job.location}}</td>
+			<td>{{job.create_date}}</td>
+			<td>{{job.contact}}</td>
+			<td><a href="edit_job/{{job.id}}" class="btn btn-default pull-right">Edit</a></td>
+			<td>
+				<form action="{{url_for('delete_job', id=job.id)}}" method="post">
+					<input type="hidden" name="_method" value="DELETE">
+					<input type="submit" value="Delete" class="btn btn-danager">
+				</form>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>-->
+
+</div>
+{% endblock %}

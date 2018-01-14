@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+<meta charset = "UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('todoCtrl', function($scope)
+{
+    $scope.todoList = [{ name:'---NAME---',skills:'---SKILLS---',projects:'---PROJECTS---' ,done: false
+
+}];
+    $scope.todoAdd = function()
+    {
+        // alert("PLEASE ENTER ...SAVE TODO");
+
+        var emp =   {
+                        name:     $scope.name,
+                        skills:   $scope.skills,
+                        projects: $scope.projects
+                    };
+
+        $scope.todoList.push(emp);
+        };
+});
+
+</script>
+<style>
+h2 {
+    color: black;
+}
+body {background:  white; font-family: vardana; color:gray; padding: 30px}
+h2{ font-size: 48px;text-transform:uppercase; text-color:white; letter-spacing: 2px;text-align: center;}
+h4{ font-size: 26px;text-transform: uppercase;letter-spacing: 4px;text-align: center;}
+p{font-size: 16px;text-align: center;}
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="todoCtrl">
+<center><h2>DEMO</h2>
+
+    <div id="myDIV">
+        <div class="container">
+        <section >
+
+                <form ng-submit="todoAdd()">
+                    <center>
+                        <hr>
+                        <input type="text" ng-model="name" required="required" value="" placeholder="NAME"/>
+
+                        <input type="text" ng-model="skills" required="required" value="" placeholder="skills"/>
+
+                        <input type="text" ng-model="projects" required="required" value="" placeholder="projects"/><br><br><br><hr>
+                    <input type="submit" value="Generate String" />
+                    </center>
+                </form >
+
+        </section>
+        </div>
+    </div>
+
+
+
+<h4>--- record--- </h4>
+<table border="#">
+<tr ng-repeat="x in todoList">
+    <td>{{ name }} , {{ skills }} , {{ projects }}</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<center>
+      <div class="jumbotron">
+        <h1>Boom Technology</h1>
+        <h2>Software Developer Recruitment</h2> 
+        <p>Check out our current apps below.</p>
+        <p>
+          <a class="btn btn-default" href="/jobs" role="button">Jobboard</a>
+          <a class="btn btn-default" href="/agent" role="button">AgentFree</a>
+          <a class="btn btn-default" href="/sargon" role="button">Sargon</a>
+        </p>
+      </div>
+</center>
+<hr>
+<!--
+       <div class="container">
+       		<div class="row main">
+       		<h4>Latest Software Developer Jobs</h4>
+       		 {% for job in jobs %}
+				<h2>{{jobs.title}} in {{jobs.locationcity}}</h2>
+				<p><span style="font-size: 14px; font-weight: bold;"> Salary:</span> <span style="font-size: 14px"> {{jobs.salary}}</span><span style="font-size: 14px; font-weight: bold;"> Posted Date:</span> <span style="font-size: 14px">{{jobs.create_date.strftime('%d-%m-%Y')}}<p>
+			<p><a class="btn btn-default" href="job/{{job.id}}">Goto Job</a></span></p>
+				
+       		{% endfor %}
+       		<p><a class="btn btn-default href="jobs">See all developer jobs</a></span></p>
+       		</div>
+      </div>
+      <hr>
+-->
+       <div class="container">
+        <h4>Contact Information</h4>
+        <p><a href="mailto:hello@topdevelopers.co.uk">hello@topdevelopers.co.uk</a></p>
+        <p>+44 207 193 1605</p>
+        <p><a href="https://twitter.com/top_developers"> Twitter</a></p>
+        <p><a href="https://www.linkedin.com/company-beta/17925810/"> Linkedin</a></p>
+        <p><a href="https://www.facebook.com/topdevelopersuk/"> Facebook</a></p>
+        <p>Boom Technology Group Ltd Registered Company No. 10763217</p>
+      </div>
+
+    </div>
+
+
+
+{% endblock %}
+

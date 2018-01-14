@@ -1,0 +1,3 @@
+source venv_boom/bin/activate
+export APP_SETTINGS="config.DevelopmentConfig"
+export DATABASE_URL="postgresql://surjitkaur:surjitkaur123@localhost/sargondb"

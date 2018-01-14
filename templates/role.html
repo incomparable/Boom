@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% import "bootstrap/wtf.html" as wtf %}  
+
+{% block body %}
+
+<body>
+  <div class="container">
+    {{ form.hidden_tag() }}
+    <table>
+      <div class="nav navbar-nav">
+      <tr>
+        <td>{{ wtf.form_field(form.jobtitle, placeholder='Job Title', size=10 ) }}</td>
+        <td>{{ wtf.form_field(form.jobtype) }}</td>
+        <td>{{ wtf.form_field(form.companytype) }}</td>
+        <td>{{ wtf.form_field(form.companyculture) }}</td>
+        <td>{{ wtf.form_field(form.locationcity, placeholder='Nearest City', size=20) }}</td>
+        <td>{{ wtf.form_field(form.salary) }}</td>
+        <td>{{ wtf.form_field(form.skills, placeholder='Skills', size=10) }}</td>
+        <td>{{ wtf.form_field(form.experience, placeholder='Experience') }}</td>
+        <td>{{ wtf.form_field(form.reference, placeholder='Your reference') }}</td>
+      </tr>
+    </div>
+    </table>
+  </div>
+</body>
+
+{% endblock %}

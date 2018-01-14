@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block body %}
+<!DOCTYPE html>
+
+<body>
+  <div class="container">
+      <center>
+          <form action="" method="post">
+          <h2>Register</h2><br><br>
+          <table>
+              <tr>
+                  <input type="text" name="fn" style="text-align: center" placeholder="First Name" required="">
+              </tr><br><br>
+
+              <tr>
+                  <input type="text" name="ln" style="text-align: center" placeholder="Last Name" required="">
+              </tr><br><br>
+
+              <tr>
+                  <input type="text" name="cn" style="text-align: center" placeholder="Company Name" required="">
+              </tr><br><br>
+
+              <tr>
+                  <select style="width: 190px;" name="ct" style="text-align: center" required="" >
+                      <option value="">Company Type</option>
+                      <option value="recruitment_agency">Recruitment Agency</option>
+                      <option value="direct_employer">Direct Employer</option>
+
+                  </select>
+
+              </tr><br><br>
+
+              <tr>
+                  <input type="email" name="email" style="text-align: center" placeholder="Email Address" required="">
+              </tr><br><br>
+
+              <tr>
+                  <input type="submit" value="Go"> >
+              </tr>
+
+          </table>
+          </form>
+
+      </center>
+  </div>
+</body>
+
+{% endblock %}

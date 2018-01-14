@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<h2>Developer Job Board</h2>
+
+<div class="container">
+{% for job in jobdata|sort(reverse=True, attribute='create_date') %}
+	<div class="row">
+		<div class="col-sm-12">
+			<p><span class="jtitle">{{job.jobtitle}}</span></p>
+			<p>{{job.citylocation}}</p>
+			<p>{{job.salary}}</p>
+			<p>{{job.create_date}}</p>
+			<p>{{job.description}} <a href="job/{{job.jobsid}}">Read More</a></p>
+			<p><a href="job/{{job.jobsid}}" class="btn btn-default">Apply</a></p><hr>
+		</div>
+	</div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+</div>
